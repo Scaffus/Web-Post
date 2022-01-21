@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    
+{% endblock %}
+
+
+
+{% block body %}
+
+<form action="/register" method="POST">
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" name="username" id="username">
+    </div>
+    <div class="mb-3">
+        <label for="mail" class="form-label">Email</label>
+        <input type="email" name="mail" id="mail">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" name="password" id="password">
+    </div>
+    <div class="mb-3">
+        <label for="repeatPassword" class="form-label">Password</label>
+        <input type="password" name="repeatPassword" id="repeatPassword">
+    </div>
+    <input type="submit" class="btn btn-primary">
+    <p>Already have an account ? <a href="/login" class="link-secondary">login</a> !</p>
+</form>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>FlaskPost - Post</title>
+{% endblock %}
+
+{% block body %}
+
+<form action="/post" method="POST">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" name="title" id="title" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="content" class="form-label">Content</label>
+        <textarea name="content" id="content" class="form-control" cols="30" rows="10"></textarea>
+    </div>
+    <div>
+        <label for="image" class="form-label">Image (optional)</label>
+        <input type="text" name="image" id="image" class="form-control">
+    </div>
+    <div>
+        <label for="author" class="form-label">Author</label>
+        <input type="text" name="author" id="author" class="form-control">
+    </div>
+    <br>
+    <input type="submit" class="btn btn-primary" value="Post">
+</form>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+
+
+{% block body %}
+
+<h1>
+    {% if user %}
+    <h1>{{ user }}</h1>
+
+    {% else %}
+    <h2>No user</h2>
+    {% endif %}
+
+</h1>
+
+{% endblock %}

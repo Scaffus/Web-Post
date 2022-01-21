@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+
+
+{% block body %}
+
+{% block alert %}
+{% if msg %}
+<div class="{{ msg.type }}" role="alert">
+    {{ msg.content }}
+</div>
+{% endif %}
+{% endblock %}
+
+{% if logged %}
+<h1>Successfully logged in! <a href="/" class="link-primary">Home</a></h1>
+{% else %}
+<div class="card" style="width: 20em; margin-top: 15%; text-align: center;   ">
+    <div class="card-body">
+        <form action="/login" method="POST">
+
+            <div class="mb-3">
+                <label for="mail" class="form-label">Email</label>
+                <input type="email" name="mail" id="mail">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <input type="submit" class="btn btn-primary">
+
+            <p>No account ? <a href="/register" class="link-secondary">create one</a> !</p>
+        </form>
+    </div>
+</div>
+
+{% endif %}
+
+{% endblock %}
